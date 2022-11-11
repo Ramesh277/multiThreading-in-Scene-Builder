@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="454.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.DownloadManager">
+   <children>
+      <BorderPane layoutX="255.0" layoutY="88.0" prefHeight="200.0" prefWidth="464.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="#c32727" strokeType="OUTSIDE" strokeWidth="0.0" text="R2 DOWNLOAD MANAGER" textAlignment="CENTER">
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="NONE" />
+                     </cursor>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <TextField fx:id="urlTextField" alignment="TOP_LEFT" promptText="Enter Download url here ">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#downloadButtonClicked" text="Start Download" textAlignment="CENTER" textFill="#ed5050">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </top>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <bottom>
+            <TableView fx:id="tableview" prefHeight="247.0" prefWidth="610.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn prefWidth="54.666686058044434" text="S.NO" />
+                <TableColumn prefWidth="188.66662216186523" text="File Name" />
+                  <TableColumn prefWidth="85.33338928222656" text="File URL" />
+                  <TableColumn prefWidth="75.0" text="Status" />
+                  <TableColumn prefWidth="75.0" text="Action" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TableView>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
